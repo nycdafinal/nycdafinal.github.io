@@ -1,3 +1,295 @@
+/*FONTS*/
 body {
-	background-color: rgb(245,245,245);
+	word-wrap: break-word;
+	font-size: 75%;
+	font-family: Palatino, sans-serif;
+	line-height: 1.3rem;
+	color: rgba(80,80,80,0.9);
+
 }
+
+h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	line-height: 2rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	line-height: 2rem;
+}
+
+h3 {
+	font-size: 2rem;
+	text-transform: capitalize;
+	line-height: 1.8rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	line-height: 1.6rem;
+}
+
+
+a {
+	text-decoration: none;
+	color: rgba(150,100,100,0.8);
+}
+
+#nav {
+	font-size: 1.5rem;
+	text-transform: lowercase;
+	line-height: 2.5rem;
+	-webkit-filter: drop-shadow(0 0 2px rgba(0,0,0,1)) drop-shadow(0 0 4px rgba(255,200,200,1));
+}
+
+#nav a {
+	color: rgba(255,255,255,0.9);
+}
+/*FONTS*/
+
+
+
+
+/*WRAP*/
+/*body {
+	background: url(media/img2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}*/
+
+#pageWrap {
+	background:rgb(245,245,245);
+	
+	padding: 2%;
+	-webkit-filter: blur(0);
+	/*height: 3000px;*/
+}
+/*WRAP*/
+
+
+
+/*page fade*/
+#pageWrap {
+	-webkit-animation: fadein 2s;
+       -moz-animation: fadein 2s;
+        -ms-animation: fadein 2s;
+         -o-animation: fadein 2s;
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/*page fade*/
+
+
+
+
+
+
+/*NAV*/
+#navbutton {
+	display: none;
+
+}
+
+label {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	margin-top: 2%;
+}
+
+#iicon {
+	height: auto;
+	width: 50px;
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	-webkit-transition: all 1s ease-in-out;
+	-webkit-filter: drop-shadow(0 0 5px rgba(255,255,255,1));
+}
+
+#nav {
+	position: fixed;
+	top: -300px;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	opacity: 0;
+	-webkit-transition: all 1s ease-in-out;
+	text-align: left;
+	z-index: 10;
+}
+
+#navbutton:checked ~ #nav {
+	display: inline-block;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	opacity: 1;
+	-webkit-transform: translate(-50%, -50%);
+	z-index: 10;
+}
+
+#overlay {
+	opacity: 0;
+	background: url(media/img2.png);
+	background-size: cover;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: -990;
+	left: -990;
+	z-index: 5;
+	pointer-events: none;
+	-webkit-transition: all 1s ease-in-out;
+}
+
+#navbutton:checked ~ #overlay {
+	display: block;
+	
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 6;
+	opacity: 0.9;
+	pointer-events: none;
+}
+
+#overlay input:checked ~ #nav {
+	top: -300px;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+}
+
+
+#contentWrap {
+	-webkit-transition: all 1s ease-in-out;
+}
+
+#overlay input:checked ~ #contentWrap {
+	-webkit-filter: blur(0);
+}
+
+#navbutton:checked ~ #iicon {
+	opacity: 0.3;
+}
+
+
+#navbutton:checked ~ #contentWrap {
+	-webkit-filter: blur(10px);
+}
+/*NAV*/
+
+
+
+/*CONTENT*/
+#overview {
+	position: relative;
+	width: 100%;
+	height: 50%;
+}
+
+	#overview h2 {
+		width: 100%;
+		margin: 1%;
+		text-align: center;
+	}
+
+	#overview h2 span {
+		text-transform: none;
+		color: white;
+		opacity: 0.8;
+		-webkit-filter: drop-shadow(0 0 7px rgba(20,0,0,0.8));
+	}
+
+	#overview h4 {
+		margin: 2.5%;
+	}
+
+	hr {
+		margin-top: 3%;
+
+	}
+
+	#o1 {
+		display: inline-block;
+		width: 29%;
+		padding: 2%;
+		text-align: center;
+		min-width: 300px;
+		vertical-align: top;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#o2 {
+		display: inline-block;
+		width: 29%;
+		padding: 2%;
+		text-align: center;
+		min-width: 300px;
+		vertical-align: top;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#o3 {
+		display: inline-block;
+		width: 29%;
+		padding: 2%;
+		text-align: center;
+		min-width: 300px;
+		vertical-align: top;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+	#b1 {
+		background-color: blue;
+
+	}
+
+		#img1 {
+			width: 30%;
+			display: inline-block;
+
+		}
+
+	#b2 {
+
+	}
+
+		#img3 {
+			width: 30%;
+
+		}
+/*CONTENT*/
